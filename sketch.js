@@ -30,7 +30,7 @@ function setup() {
   var star_options={
     isStatic:true
   }
-  starBody=Bodies.rectangle(200,200,50,50,star_options);
+  starBody=Bodies.rectangle(600,30,50,50,star_options);
   World.add(world,starBody);
 
   Engine.run(engine);
@@ -38,13 +38,15 @@ function setup() {
 
 function draw() {
   background(bg);
+
+  keyFun();
   
   drawSprites();
 
-  star.x=StarBody.position.x;
-  star.y=StarBody.position.y;
+  star.x=starBody.position.x;
+  star.y=starBody.position.y;
 
-  if(star.y>470 && starBody.position.y>470){
+  if(star.y>530 && starBody.position.y>470){
     Matter.Body.setStatic(starBody, true);   
   }
 }
@@ -52,11 +54,11 @@ function draw() {
 function keyFun(){
 
   if(keyCode===LEFT_ARROW){
-    fairy.x=fairy.x-20;  
+    fairy.x=fairy.x-5;  
    }
  
  if(keyCode===RIGHT_ARROW){
-    fairy.x=fairy.x+20;  
+    fairy.x=fairy.x+5;  
    }
  
  if(keyCode===DOWN_ARROW){
