@@ -8,9 +8,9 @@ var canvas,bg;
 
 function preload(){
    
-  bg=loadImage("images/starnight.png");
-  starImg=loadImage("images/star.png");
-  fairyImg=loadAnimation("images/fairy1.png","images/fairy2.png"); 
+  bg=loadImage("starnight.png");
+  starImg=loadImage("star.png");
+  fairyImg=loadAnimation("fairy1.png","fairy2.png"); 
 }
 
 function setup() {
